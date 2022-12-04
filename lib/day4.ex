@@ -23,7 +23,7 @@ defmodule AOC.Day4 do
     |> Enum.count()
   end
 
-  def overlaps?({min_a, max_a, min_b, max_b}) do
+  defp overlaps?({min_a, max_a, min_b, max_b}) do
     (min_a >= min_b && min_a <= max_b) || (max_a >= min_b && max_a <= max_b) ||
       (min_b >= min_a && min_b <= max_a) || (max_b >= min_a && max_b <= max_a)
   end
